@@ -14,7 +14,7 @@ class PresentationService(
 ) {
 
     @Transactional(readOnly = true) // 읽기 전용(스냅샷을 생략함 성능에 이점이 있음)
-    fun getIntroduction():List<IntroductionDTO>{
+    fun getIntroduction(): List<IntroductionDTO>{
         val introductions = presentationRepository.getActiveIntroductions()
 
         return introductions.map {IntroductionDTO(it)}
