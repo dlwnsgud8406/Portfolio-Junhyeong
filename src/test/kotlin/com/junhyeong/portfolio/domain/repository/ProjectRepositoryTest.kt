@@ -56,6 +56,7 @@ class ProjectRepositoryTest (
         }
         skillRepository.saveAll(skills)
         println("----- 스킬 데이터 초기화 종료 -----")
+
         println("----- 데이터 초기화 이전 조회 시작 -----")
         val beforeInsert = projectRepository.findAll()
         assertThat(beforeInsert).hasSize(0)
@@ -68,7 +69,8 @@ class ProjectRepositoryTest (
             projects.add(project)
         }
         projectRepository.saveAll(projects)
-        println("----- 테스트 데이터 초기화 종료 -----") }
+        println("----- 테스트 데이터 초기화 종료 -----")
+    }
 
     @Test
     fun testFindAll() {
@@ -79,6 +81,7 @@ class ProjectRepositoryTest (
         for (project in projects) {
             assertThat(project.details).hasSize(project.name.toInt())
             println("project.details.size: ${project.details.size}")
+
             assertThat(project.skills).hasSize(project.name.toInt())
             println("project.skills.size: ${project.skills.size}")
         }
@@ -90,9 +93,11 @@ class ProjectRepositoryTest (
         val projects = projectRepository.findAllByIsActive(true)
         assertThat(projects).hasSize(DATA_SIZE)
         println("projects.size: ${projects.size}")
+
         for (project in projects) {
             assertThat(project.details).hasSize(project.name.toInt())
             println("project.details.size: ${project.details.size}")
+
             assertThat(project.skills).hasSize(project.name.toInt())
             println("project.skills.size: ${project.skills.size}")
         }
