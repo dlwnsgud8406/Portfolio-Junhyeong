@@ -46,7 +46,7 @@ class DataInitializer(private val achievementRepository: AchievementRepository,
         introductionRepository.saveAll(introductions)
 
         val links = mutableListOf<Link>(
-            Link(name = "Github", content = "https://github.com/infomuscle", isActive = true),
+            Link(name = "Github", content = "https://github.com/dlwnsgud8406", isActive = true),
             Link(name = "Linkedin", content = "https://www.linkedin.com/in/bokeunjeong",
                 isActive = true),
         )
