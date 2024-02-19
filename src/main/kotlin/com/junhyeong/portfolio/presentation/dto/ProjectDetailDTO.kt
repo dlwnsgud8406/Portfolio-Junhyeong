@@ -2,7 +2,7 @@ package com.junhyeong.portfolio.presentation.dto
 
 import com.junhyeong.portfolio.domain.entity.ProjectDetail
 
-class ProjectDetailDTO(
+data class ProjectDetailDTO(
     val content: String,
     val url: String?
 ) {

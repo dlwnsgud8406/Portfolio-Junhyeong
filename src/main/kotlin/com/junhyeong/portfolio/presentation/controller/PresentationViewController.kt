@@ -39,6 +39,7 @@ class PresentationViewController(
     @GetMapping("/projects")
     fun projects(model: Model): String{
         val projects = presentationService.getProjects()
+        model.addAttribute("projects", projects)
 
         return "presentation/projects"
     }

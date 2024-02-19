@@ -2,7 +2,7 @@ package com.junhyeong.portfolio.presentation.dto
 
 import com.junhyeong.portfolio.domain.entity.Project
 
-class ProjectDTO(
+data class ProjectDTO(
     val name: String,
     val description: String,
     val startYearMonth: String,
