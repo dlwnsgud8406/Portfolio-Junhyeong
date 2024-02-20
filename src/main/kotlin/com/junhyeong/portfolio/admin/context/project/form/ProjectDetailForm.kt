@@ -12,7 +12,7 @@ data class ProjectDetailForm (
 
     val url: String?,
 
-    val isActive: Boolean,
+    val isActive: Boolean
 
 
 ) {

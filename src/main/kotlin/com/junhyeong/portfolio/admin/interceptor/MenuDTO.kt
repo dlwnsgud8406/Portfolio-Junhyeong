@@ -1,6 +1,6 @@
 package com.junhyeong.portfolio.admin.interceptor
 
-class MenuDTO(
+data class MenuDTO(
     val name: String,
     val pages: List<PageDTO>
 )

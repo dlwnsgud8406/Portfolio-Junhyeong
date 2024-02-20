@@ -7,8 +7,9 @@ data class LinkForm(
     @field:NotBlank(message = "필수값입니다.")
     val name: String,
     @field:NotBlank(message = "필수값입니다.")
-    val isActive: Boolean,
     val content: String,
+    val isActive: Boolean
+
 ) {
     fun toEntity(): Link {
         return Link(

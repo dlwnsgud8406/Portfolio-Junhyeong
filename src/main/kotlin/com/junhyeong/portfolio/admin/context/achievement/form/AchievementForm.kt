@@ -7,9 +7,13 @@ import java.time.LocalDate
 data class AchievementForm(
     @field:NotBlank(message = "필수값입니다.")
     val title: String,
+    @field:NotBlank(message = "필수값입니다.")
     val description: String,
+    @field:NotBlank(message = "필수값입니다.")
     val host: String,
+    @field:NotBlank(message = "필수값입니다.")
     val achievedDate: String,
+
     val isActive: Boolean,
 ){
     fun toEntity(): Achievement{

@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Positive
 
-class ExperienceForm(
+data class ExperienceForm(
     @field:NotBlank(message = "필수값입니다.")
     val title: String,
 
@@ -26,7 +26,7 @@ class ExperienceForm(
 
     val isActive: Boolean,
 
-    val details: List<ExperienceDetailForm>
+    val details: List<ExperienceDetailForm>?
 ) {
     fun toEntity(): Experience{
         return Experience(

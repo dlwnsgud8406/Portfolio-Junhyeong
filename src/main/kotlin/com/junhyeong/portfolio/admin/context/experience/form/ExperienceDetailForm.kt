@@ -9,7 +9,7 @@ data class ExperienceDetailForm(
     @field:NotBlank(message = "필수값입니다.")
     val content: String,
 
-    val isActive: Boolean,
+    val isActive: Boolean
 
 
 ) {

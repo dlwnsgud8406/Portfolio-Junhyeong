@@ -25,7 +25,7 @@ class AdminExperienceViewController(
             SelectFormElementDTO("endMonth", 2, (1..12).toList()),
             SelectFormElementDTO("isActive", 2, listOf(true.toString(), false.toString()))
         )
-        model.addAttribute("fromElements", formElements)
+        model.addAttribute("formElements", formElements)
 
         val detailFormElements = listOf<FormElementDTO>(
             TextFormElementDTO("content", 10),

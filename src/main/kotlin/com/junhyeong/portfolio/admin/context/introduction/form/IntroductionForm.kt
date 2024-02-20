@@ -2,12 +2,11 @@ package com.junhyeong.portfolio.admin.context.introduction.form
 
 import com.junhyeong.portfolio.domain.entity.Introduction
 import jakarta.validation.constraints.NotBlank
-import java.time.LocalDate
 
 data class IntroductionForm(
     @field:NotBlank(message = "필수값입니다.")
     val content: String,
-    val isActive: Boolean,
+    val isActive: Boolean
 ) {
     fun toEntity(): Introduction {
         return Introduction(
