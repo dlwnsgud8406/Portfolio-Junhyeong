@@ -27,7 +27,7 @@ class AdminDashboardViewController(
             VisitorsDTO(name = "Weekly", count = weekly, color = "#2eca6a", background = "#e0f8e9"),
             VisitorsDTO(name = "Today", count = today, color = "#ff771d", background = "#ffecdf")
         )
-        model.addAttribute(visitors)
+        model.addAttribute("visitors", visitors)
 
         val pageAttributes = mutableMapOf<String, Any>(
             Pair("menuName", ""),
